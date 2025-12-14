@@ -373,7 +373,7 @@ strong {
 =============================== */
 .menu-toggle::before {
     content: '▸';
-    font-size: 0.9rem;
+    font-size: 1.5rem;
 }
 
 .menu-toggle.expanded::before {
