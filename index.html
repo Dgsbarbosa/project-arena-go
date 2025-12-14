@@ -1,600 +1,592 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Uso - Arena GO | Contrato TJSP</title>
-    <link rel="stylesheet" href="manual-styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual de Uso - Arena GO | Contrato TJSP</title>
+  <link rel="stylesheet" href="manual-styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <div class="header-title">
-                <h1>Manual de Uso - Arena GO</h1>
-                <p class="header-subtitle">Sistema de Gerenciamento de Demandas</p>
-            </div>
-            <div class="header-info">
-                <span class="contract">Contrato TJSP</span>
-                <span class="company">EQS Engenharia</span>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <aside class="sidebar" id="sidebar">
-            <nav class="menu">
-                <ul class="menu-list">
-                    <li class="menu-item">
-                        <a href="#atividades" class="menu-link">1. Atividades</a>
-                        <button class="menu-toggle" aria-label="Expandir submenu"></button>
-                        <ul class="submenu">
-                            <li class="menu-item">
-                                <a href="#atividade" class="menu-link">1.1. Atividade</a>
-                                <button class="menu-toggle" aria-label="Expandir submenu"></button>
-                                <ul class="submenu">
-                                    <li class="menu-item">
-                                        <a href="#visao-geral" class="menu-link">1.1.1. Vis�o Geral do Dashboard</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#filtros-consulta" class="menu-link">1.1.2. Filtros de Consulta</a>
-                                        <button class="menu-toggle" aria-label="Expandir submenu"></button>
-                                        <ul class="submenu">
-                                            <li class="menu-item">
-                                                <a href="#regras-restricoes" class="menu-link">1.1.2.1. Regras e Restri��es de Consulta</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#botoes-acao-tela" class="menu-link">1.1.3. Bot�es de A��o (Tela)</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#indicadores" class="menu-link">1.1.4. Indicadores de Atividades</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#lista-atividades" class="menu-link">1.1.5. Lista de Atividades</a>
-                                        <button class="menu-toggle" aria-label="Expandir submenu"></button>
-                                        <ul class="submenu">
-                                            <li class="menu-item">
-                                                <a href="#botoes-acao-linha" class="menu-link">1.1.5.1. Bot�es de A��o por Linha</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <a href="#botao-novo" class="menu-link">1.1.6. Bot�o Novo</a>
-                                        <button class="menu-toggle" aria-label="Expandir submenu"></button>
-                                        <ul class="submenu">
-                                            <li class="menu-item">
-                                                <a href="#nova-atividade" class="menu-link">1.1.6.1. Nova Atividade</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="#cadastro-nova" class="menu-link">1.1.6.2. Cadastro de Atividade (Nova Atividade)</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="#cadastro-edicao" class="menu-link">1.1.6.3. Cadastro de Atividade (Edi��o de Atividade)</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="#cadastro-fechada" class="menu-link">1.1.6.4. Cadastro de Atividade (Edi��o de Atividade Fechada)</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#dispositivo-movel" class="menu-link">1.2. Dispositivo M�vel</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#orcamento" class="menu-link">1.3. Or�amento de Atividades</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#rastreamento" class="menu-link">1.4. Rastreamento</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#agendamentos" class="menu-link">1.5. Agendamentos</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#cadastros" class="menu-link">1.6. Cadastros (CH4)</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#relatorios" class="menu-link">1.7. Relat�rios (CHM)</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#rh" class="menu-link">2. RH</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#treinamento" class="menu-link">3. Treinamento</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-
-        <main class="content">
-            <section id="atividades" class="section">
-                <h2 class="section-title">1. ATIVIDADES</h2>
-
-                <section id="atividade" class="subsection">
-                    <h3 class="subsection-title">1.1. Atividade</h3>
-                    <p>A se��o <strong>Atividade</strong> constitui o n�cleo operacional do Sistema de Gerenciamento de Demandas do Arena GO. � por meio desta funcionalidade que s�o realizadas a consulta, o acompanhamento, o controle e o cadastro dos chamados de manuten��o vinculados ao contrato do TJSP.</p>
-
-                    <p>Nesta tela, o usu�rio poder�:</p>
-                    <ul>
-                        <li>Monitorar o status dos chamados;</li>
-                        <li>Aplicar filtros avan�ados de consulta;</li>
-                        <li>Analisar indicadores operacionais;</li>
-                        <li>Exportar informa��es;</li>
-                        <li>Cadastrar novas atividades.</li>
-                    </ul>
-
-                    <p>Esta funcionalidade � utilizada tanto para a gest�o operacional di�ria quanto para fins de controle contratual, auditorias e acompanhamento de desempenho.</p>
-
-                    <section id="visao-geral" class="subsubsection">
-                        <h4 class="subsubsection-title">1.1.1. Vis�o Geral do Dashboard</h4>
-                        <p>O Dashboard de Atividades � composto pelos seguintes elementos:</p>
-                        <ul>
-                            <li>Painel de filtros de consulta;</li>
-                            <li>Indicadores resumidos de status das atividades;</li>
-                            <li>Lista detalhada dos chamados cadastrados;</li>
-                            <li>Bot�es de a��o r�pida.</li>
-                        </ul>
-                    </section>
-
-                    <section id="filtros-consulta" class="subsubsection">
-                        <h4 class="subsubsection-title">1.1.2. Filtros de Consulta</h4>
-                        <p>Os filtros permitem refinar a pesquisa dos chamados de acordo com crit�rios operacionais, contratuais e temporais.</p>
-
-                        <h5 class="field-title">Filtros dispon�veis:</h5>
-
-                        <div class="field-block">
-                            <h6 class="field-name">ID</h6>
-                            <p>Campo digit�vel.</p>
-                            <p>Utilizado para informar o n�mero interno EQS do chamado (n�o corresponde ao ID do cliente).</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Situa��o</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Op��es dispon�veis:</p>
-                            <ul>
-                                <li>Aguardando confirma��o;</li>
-                                <li>Aberto;</li>
-                                <li>Em andamento;</li>
-                                <li>Fechado;</li>
-                                <li>Fechado com pend�ncia;</li>
-                                <li>Cancelado.</li>
-                            </ul>
-                            <p class="observation"><strong>Observa��o:</strong> por padr�o, o sistema mant�m quatro situa��es previamente selecionadas.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Contrato</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Op��o padr�o:</p>
-                            <ul>
-                                <li>TJSP.</li>
-                            </ul>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Tipo</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Op��es dispon�veis:</p>
-                            <ul>
-                                <li>Abastecimento;</li>
-                                <li>Acompanhamento;</li>
-                                <li>Adequa��o;</li>
-                                <li>Comunicado;</li>
-                                <li>Contrata��o;</li>
-                                <li>Corretiva;</li>
-                                <li>Corretiva programada;</li>
-                                <li>Desinstala��o;</li>
-                                <li>GMG;</li>
-                                <li>Implanta��o;</li>
-                                <li>Inspe��o;</li>
-                                <li>Instala��o;</li>
-                                <li>Preditiva;</li>
-                                <li>Preventiva;</li>
-                                <li>Preventiva de El�trica;</li>
-                                <li>Preventiva de Hidr�ulica;</li>
-                                <li>Preventiva Predial;</li>
-                                <li>Registro;</li>
-                                <li>Retirada de pend�ncia;</li>
-                                <li>Teste;</li>
-                                <li>Vistoria.</li>
-                            </ul>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Atividade</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Op��es dispon�veis:</p>
-                            <ul>
-                                <li>Alvenaria;</li>
-                                <li>Ca�a Vazamento;</li>
-                                <li>Di�rio;</li>
-                                <li>El�trica;</li>
-                                <li>Hidr�ulica;</li>
-                                <li>Pintura;</li>
-                                <li>Poda;</li>
-                                <li>Reparo/Instala��o Geral;</li>
-                                <li>Telhado;</li>
-                                <li>Entre outros.</li>
-                            </ul>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Estado</h6>
-                            <p>Lista suspensa (m�ltipla escolha). Utilizada para filtro por estado.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Macro�rea</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Regi�o macro (n�o aplic�vel).</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Local</h6>
-                            <p>Campo com autocompletar.</p>
-                            <p>Permite selecionar polos e pr�dios cadastrados.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Ativo do Local</h6>
-                            <p>Campo com autocompletar.</p>
-                            <p>Sem fun��o operacional no momento.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">LPU</h6>
-                            <p>Lista suspensa.</p>
-                            <p>Op��es dispon�veis:</p>
-                            <ul>
-                                <li>Todos;</li>
-                                <li>Com LPU;</li>
-                                <li>Sem LPU (padr�o).</li>
-                            </ul>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Respons�vel</h6>
-                            <p>Campo com autocompletar.</p>
-                            <p>Permite selecionar colaboradores EQS.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Ocorr�ncia</h6>
-                            <p>Per�odo (intervalo de datas).</p>
-                            <p>Refere-se � data de abertura do chamado pelo cliente.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Prazo</h6>
-                            <p>Per�odo (intervalo de datas).</p>
-                            <p>Refere-se � data de agendamento para execu��o da atividade.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Fechamento</h6>
-                            <p>Per�odo (intervalo de datas).</p>
-                            <p>Refere-se � data de conclus�o da atividade.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Vencimento</h6>
-                            <p>Lista suspensa.</p>
-                            <p>Op��es dispon�veis:</p>
-                            <ul>
-                                <li>Todos;</li>
-                                <li>Vencido;</li>
-                                <li>Em 5 dias;</li>
-                                <li>Em 15 dias.</li>
-                            </ul>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">C�d. Cliente</h6>
-                            <p>Campo digit�vel.</p>
-                            <p>Aceita exclusivamente o ID completo do chamado aberto pelo cliente.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Prioridade</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Utilizada para classifica��o do n�vel de prioridade.</p>
-                        </div>
-
-                        <div class="field-block">
-                            <h6 class="field-name">Avalia��o</h6>
-                            <p>Lista suspensa (m�ltipla escolha).</p>
-                            <p>Utilizada para classifica��o da avalia��o do atendimento.</p>
-                        </div>
-
-                        <section id="regras-restricoes" class="subsubsubsection">
-                            <h5 class="subsubsubsection-title">1.1.2.1. Regras e Restri��es de Consulta</h5>
-                            <p>Para consultas com per�odos extensos, aplicam-se as seguintes regras:</p>
-                            <ul>
-                                <li>� obrigat�rio informar Contrato ou Respons�vel;</li>
-                                <li>Caso contr�rio, o per�odo m�ximo permitido para consulta � de 6 meses;</li>
-                                <li>O descumprimento das regras gera alerta autom�tico em tela.</li>
-                            </ul>
-                        </section>
-                    </section>
-
-                    <section id="botoes-acao-tela" class="subsubsection">
-                        <h4 class="subsubsection-title">1.1.3. Bot�es de A��o (Tela)</h4>
-                        <p>Localizados na parte inferior do painel de filtros:</p>
-                        <ul>
-                            <li><strong>Consultar:</strong> executa a pesquisa conforme os filtros aplicados;</li>
-                            <li><strong>Limpar:</strong> restaurar os filtros padr�o do sistema;</li>
-                            <li><strong>Exportar Excel:</strong> exporta a lista de atividades conforme os filtros utilizados;</li>
-                            <li><strong>Favoritos:</strong> permite gerenciar pesquisas salvas, colunas exibidas e indicadores. Ao clicar na seta, � poss�vel editar o dashboard.</li>
-                        </ul>
-                    </section>
-
-                    <section id="indicadores" class="subsubsection">
-                        <h4 class="subsubsection-title">1.1.4. Indicadores de Atividades</h4>
-                        <p>Os indicadores funcionam como filtros r�pidos.</p>
-
-                        <h5 class="field-title">Funcionamento:</h5>
-                        <p>Ao selecionar um indicador, o sistema aplica automaticamente o filtro correspondente e atualiza a lista de atividades. Esses indicadores podem ser personalizados por meio da fun��o Favoritos.</p>
-
-                        <h5 class="field-title">Indicadores dispon�veis:</h5>
-                        <ul>
-                            <li>Cr�tico;</li>
-                            <li>Vencido;</li>
-                            <li>Aguardando;</li>
-                            <li>Abertos;</li>
-                            <li>Andamento;</li>
-                            <li>Pendentes;</li>
-                            <li>Fechado.</li>
-                        </ul>
-                    </section>
-
-                    <section id="lista-atividades" class="subsubsection">
-                        <h4 class="subsubsection-title">1.1.5. Lista de Atividades</h4>
-                        <p>Exibe os chamados conforme os filtros aplicados, com colunas como ID, Tipo, Local, Respons�vel, Situa��o, entre outras. As colunas exibidas podem ser personalizadas nos favoritos.</p>
-
-                        <section id="botoes-acao-linha" class="subsubsubsection">
-                            <h5 class="subsubsubsection-title">1.1.5.1. Bot�es de A��o por Linha</h5>
-                            <p>Dispon�veis na coluna A��o de cada registro:</p>
-                            <ul>
-                                <li><strong>Editar:</strong> permite alterar dados do chamado;</li>
-                                <li><strong>Gerar PDF de Evid�ncias:</strong> gera relat�rio com fotos e anexos;</li>
-                                <li><strong>Excluir/Cancelar:</strong> cancela ou remove o chamado, conforme as permiss�es do usu�rio.</li>
-                            </ul>
-                        </section>
-                    </section>
-
-                    <section id="botao-novo" class="subsubsection">
-                        <h4 class="subsubsection-title">1.1.6. Bot�o Novo</h4>
-                        <p>O bot�o Novo, localizado no topo do dashboard em Atividades > Atividade, permite registrar um novo chamado e redireciona o usu�rio para a p�gina de Nova Atividade.</p>
-
-                        <section id="nova-atividade" class="subsubsubsection">
-                            <h5 class="subsubsubsection-title">1.1.6.1. Nova Atividade</h5>
-                            <p>O formul�rio de Nova Atividade � utilizado para o registro inicial do chamado.</p>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Local de Atendimento*</h6>
-                                <p>Campo obrigat�rio.</p>
-                                <p>Como preencher:</p>
-                                <ul>
-                                    <li>Digite parte do nome do local, contrato ou endere�o;</li>
-                                    <li>Selecione a op��o correta na lista apresentada.</li>
-                                </ul>
-                                <p class="observation"><strong>Observa��o:</strong> somente ap�s a sele��o do Local de Atendimento os demais campos do formul�rio ser�o habilitados. Caso o local n�o exista, utilize o link para cadastro de novo local.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Atividade*</h6>
-                                <p>Lista suspensa obrigat�ria.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Data Ocorr�ncia*</h6>
-                                <p>Data de abertura do chamado pelo cliente. Ap�s o preenchimento, o campo Prazo � habilitado.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Prazo*</h6>
-                                <p>Data de agendamento para execu��o da atividade.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Previs�o de Chegada ao Local de Atendimento</h6>
-                                <p>Campo opcional de data e hora.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Previs�o de Retorno de Energia</h6>
-                                <p>Campo opcional, aplic�vel apenas a ocorr�ncias el�tricas.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Atendimento Cr�tico</h6>
-                                <p>Checkbox opcional, com padr�o "N�o".</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Foto Ocorr�ncia</h6>
-                                <p>Upload opcional de imagens relacionadas � ocorr�ncia.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Respons�vel*</h6>
-                                <p>Colaborador respons�vel pela execu��o da atividade.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Observa��o p/ Respons�vel</h6>
-                                <p>Campo destinado a informa��es repassadas pelo cliente.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">C�d. Interno do Cliente</h6>
-                                <p>Campo opcional para o ID do cliente.</p>
-                            </div>
-
-                            <div class="field-block">
-                                <h6 class="field-name">Observa��o Cliente</h6>
-                                <p>Campo opcional para orienta��es internas. N�o � poss�vel alterar ap�s o salvamento.</p>
-                            </div>
-
-                            <h6 class="field-title">Fluxo resumido de cadastro:</h6>
-                            <ol>
-                                <li>Selecionar o Local de Atendimento;</li>
-                                <li>Preencher a Data de Ocorr�ncia;</li>
-                                <li>Selecionar a Atividade e o Respons�vel;</li>
-                                <li>Preencher os campos opcionais, se necess�rio;</li>
-                                <li>Clicar em Salvar.</li>
-                            </ol>
-
-                            <p>Ap�s o salvamento, a atividade � registrada com a situa��o <strong>Aberto</strong> e o sistema redireciona para a tela de Cadastro de Atividade.</p>
-                        </section>
-
-                        <section id="cadastro-nova" class="subsubsubsection">
-                            <h5 class="subsubsubsection-title">1.1.6.2. Cadastro de Atividade (Nova Atividade)</h5>
-
-                            <h6 class="field-title">Bot�es do topo:</h6>
-                            <ul>
-                                <li><strong>Abrir Or�amento:</strong> abre nova guia para inclus�o de or�amento;</li>
-                                <li><strong>Exportar PDF:</strong> gera relat�rio com fotos e anexos;</li>
-                                <li><strong>Bloquear:</strong> bloqueia o acesso do cliente ao relat�rio.</li>
-                            </ul>
-
-                            <h6 class="field-title">Abas dispon�veis:</h6>
-
-                            <div class="tab-block">
-                                <h6 class="field-name">Atividade</h6>
-                                <p>Permite alterar informa��es como:</p>
-                                <ul>
-                                    <li>Situa��o;</li>
-                                    <li>Data de Ocorr�ncia;</li>
-                                    <li>Prazo;</li>
-                                    <li>Previs�o de Chegada;</li>
-                                    <li>Previs�o de Retorno de Energia;</li>
-                                    <li>Atendimento Cr�tico;</li>
-                                    <li>Respons�vel;</li>
-                                    <li>Observa��o p/ Respons�vel;</li>
-                                    <li>C�d. Interno do Cliente;</li>
-                                    <li>Foto da Ocorr�ncia.</li>
-                                </ul>
-                                <p>Inclui tamb�m o link <strong>Atividade no Local</strong>, que lista os servi�os executados naquele local.</p>
-                                <p>O hist�rico apresenta todas as intera��es realizadas na atividade, enquanto os coment�rios s�o utilizados para mensagens internas de controle.</p>
-                            </div>
-
-                            <div class="tab-block">
-                                <h6 class="field-name">Relat�rio</h6>
-                                <p>Cont�m as informa��es detalhadas do chamado:</p>
-                                <ul>
-                                    <li>Descri��o do Chamado;</li>
-                                    <li>Condi��o Antes;</li>
-                                    <li>Condi��o Durante;</li>
-                                    <li>Condi��o Depois;</li>
-                                    <li>Conclus�o do Chamado.</li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-block">
-                                <h6 class="field-name">Cadastro de Intera��es</h6>
-                                <p>Utilizado para inserir a descri��o do chamado do cliente, fotos do antes, durante e depois, bem como a conclus�o detalhada do servi�o executado. Para carregar imagens, selecione a foto e clique em enviar ap�s o carregamento.</p>
-                            </div>
-
-                            <div class="tab-block">
-                                <h6 class="field-name">LPU</h6>
-                                <p>As fun��es desta aba n�o s�o utilizadas neste momento.</p>
-                            </div>
-                        </section>
-
-                        <section id="cadastro-edicao" class="subsubsubsection">
-                            <h5 class="subsubsubsection-title">1.1.6.3. Cadastro de Atividade (Edi��o de Atividade em Aberto)</h5>
-                            <p>Durante a edi��o da atividade, � poss�vel alterar:</p>
-
-                            <h6 class="field-title">Na aba Atividade:</h6>
-                            <ul>
-                                <li>Data de Ocorr�ncia;</li>
-                                <li>Prazo;</li>
-                                <li>Previs�o de Chegada ao Local de Atendimento;</li>
-                                <li>Previs�o de Retorno de Energia;</li>
-                                <li>Atendimento Cr�tico;</li>
-                                <li>Respons�vel;</li>
-                                <li>Observa��o p/ Respons�vel;</li>
-                                <li>C�d. Interno do Cliente.</li>
-                            </ul>
-
-                            <h6 class="field-title">Na aba Cadastro de Intera��es:</h6>
-                            <ul>
-                                <li>Descri��o do Chamado;</li>
-                                <li>Condi��o Antes;</li>
-                                <li>Condi��o Durante;</li>
-                                <li>Condi��o Depois;</li>
-                                <li>Conclus�o do Chamado.</li>
-                            </ul>
-
-                            <p class="observation"><strong>Observa��o importante:</strong> ao salvar a atividade com a situa��o <strong>fechado</strong>, n�o ser� poss�vel realizar altera��es, exceto em situa��es espec�ficas.</p>
-                        </section>
-
-                        <section id="cadastro-fechada" class="subsubsubsection">
-                            <h5 class="subsubsubsection-title">1.1.6.4. Cadastro de Atividade (Edi��o de Atividade Fechada)</h5>
-                            <p>Ao abrir a edi��o de uma atividade fechada, s�o disponibilizados os seguintes bot�es:</p>
-                            <ul>
-                                <li><strong>Enviar p/ aprova��o do cliente:</strong> envia e-mail com o PDF do relat�rio (fun��es Aprovar/Reprovar n�o funcionais no momento);</li>
-                                <li><strong>Fechar com pend�ncia:</strong> utilizado quando h� necessidade de aguardar compra ou chegada de material;</li>
-                                <li><strong>Nova atividade relacionada:</strong> cria um novo chamado vinculado � atividade atual.</li>
-                            </ul>
-
-                            <h6 class="field-title">Edi��es poss�veis:</h6>
-                            <ul>
-                                <li>Alterar a situa��o de Fechado para Fechado com pend�ncia, liberando a edi��o;</li>
-                                <li>Alterar o C�d. Interno do Cliente (ID do chamado do cliente).</li>
-                            </ul>
-                        </section>
-                    </section>
-                </section>
-
-                <section id="dispositivo-movel" class="subsection">
-                    <h3 class="subsection-title">1.2. Dispositivo M�vel</h3>
-                    <p class="development">(Manual em desenvolvimento)</p>
-                </section>
-
-                <section id="orcamento" class="subsection">
-                    <h3 class="subsection-title">1.3. Or�amento de Atividades</h3>
-                    <p class="development">(Manual em desenvolvimento)</p>
-                </section>
-
-                <section id="rastreamento" class="subsection">
-                    <h3 class="subsection-title">1.4. Rastreamento</h3>
-                    <p class="development">(Manual em desenvolvimento)</p>
-                </section>
-
-                <section id="agendamentos" class="subsection">
-                    <h3 class="subsection-title">1.5. Agendamentos</h3>
-                    <p class="development">(Manual em desenvolvimento)</p>
-                </section>
-
-                <section id="cadastros" class="subsection">
-                    <h3 class="subsection-title">1.6. Cadastros (CH4)</h3>
-                    <p class="development">(Manual em desenvolvimento)</p>
-                </section>
-
-                <section id="relatorios" class="subsection">
-                    <h3 class="subsection-title">1.7. Relatórios (CHM)</h3>
-                    <p class="development">(Manual em desenvolvimento)</p>
-                </section>
-            </section>
-
-            <section id="rh" class="section">
-                <h2 class="section-title">2. RH</h2>
-                <p class="development">(Manual em desenvolvimento)</p>
-            </section>
-
-            <section id="treinamento" class="section">
-                <h2 class="section-title">3. Treinamento</h2>
-                <p class="development">(Manual em desenvolvimento)</p>
-            </section>
-        </main>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-title">
+        <h1>Manual de Uso - Arena GO</h1>
+        <p class="header-subtitle">Sistema de Gerenciamento de Demandas</p>
+      </div>
+      <div class="header-info">
+        <span class="contract">Contrato TJSP</span>
+        <span class="company">EQS Engenharia</span>
+      </div>
     </div>
+  </header>
 
-    <script src="manual-script.js"></script>
+  <div class="container">
+    <aside class="sidebar" id="sidebar">
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a href="#atividades" class="menu-link">1. Atividades</a>
+            <button class="menu-toggle"></button>
+            <ul class="submenu">
+              <li class="menu-item">
+                <a href="#atividade" class="menu-link">1.1. Atividade</a>
+                <button class="menu-toggle"></button>
+                <ul class="submenu">
+                  <li class="menu-item">
+                    <a href="#visao-geral" class="menu-link">1.1.1. Visão Geral do Dashboard</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#filtros-consulta" class="menu-link">1.1.2. Filtros de Consulta</a>
+                    <button class="menu-toggle"></button>
+                    <ul class="submenu">
+                      <li class="menu-item">
+                        <a href="#regras-restricoes" class="menu-link">1.1.2.1. Regras e Restrições</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#botoes-acao-tela" class="menu-link">1.1.3. Botões de Ação (Tela)</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#indicadores" class="menu-link">1.1.4. Indicadores de Atividades</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#lista-atividades" class="menu-link">1.1.5. Lista de Atividades</a>
+                    <button class="menu-toggle"></button>
+                    <ul class="submenu">
+                      <li class="menu-item">
+                        <a href="#botoes-acao-linha" class="menu-link">1.1.5.1. Botões por Linha</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a href="#botao-novo" class="menu-link">1.1.6. Botão Novo</a>
+                    <button class="menu-toggle"></button>
+                    <ul class="submenu">
+                      <li class="menu-item">
+                        <a href="#nova-atividade" class="menu-link">1.1.6.1. Nova Atividade</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#cadastro-nova" class="menu-link">1.1.6.2. Cadastro (Nova)</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#cadastro-edicao" class="menu-link">1.1.6.3. Cadastro (Edição de Atividade)</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="#cadastro-fechada" class="menu-link">1.1.6.4. Cadastro (Edição de Atividade Fechada)</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item"><a href="#dispositivo-movel" class="menu-link">1.2. Dispositivo Móvel</a></li>
+              <li class="menu-item"><a href="#orcamento" class="menu-link">1.3. Orçamento de Atividades</a></li>
+              <li class="menu-item"><a href="#rastreamento" class="menu-link">1.4. Rastreamento</a></li>
+              <li class="menu-item"><a href="#agendamentos" class="menu-link">1.5. Agendamentos</a></li>
+              <li class="menu-item"><a href="#cadastros" class="menu-link">1.6. Cadastros (CH4)</a></li>
+              <li class="menu-item"><a href="#relatorios" class="menu-link">1.7. Relatórios (CHM)</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="#rh" class="menu-link">2. RH</a></li>
+          <li class="menu-item"><a href="#treinamento" class="menu-link">3. Treinamento</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="atividades" class="section">
+        <h2 class="section-title">1. ATIVIDADES</h2>
+
+        <section id="atividade" class="subsection">
+          <h3 class="subsection-title">1.1. Atividade</h3>
+          <p>A seção <strong>Atividade</strong> constitui o núcleo operacional do Sistema de Gerenciamento de Demandas do Arena GO. É por meio desta funcionalidade que são realizadas a consulta, o acompanhamento, o controle e o cadastro dos chamados de manutenção vinculados ao contrato do TJSP.</p>
+          
+          <p>Nesta tela, o usuário poderá:</p>
+          <ul>
+            <li>Monitorar o status dos chamados;</li>
+            <li>Aplicar filtros avançados de consulta;</li>
+            <li>Analisar indicadores operacionais;</li>
+            <li>Exportar informações;</li>
+            <li>Cadastrar novas atividades.</li>
+          </ul>
+          
+          <p>Esta funcionalidade é utilizada tanto para a gestão operacional diária quanto para fins de controle contratual, auditorias e acompanhamento de desempenho.</p>
+
+          <section id="visao-geral" class="subsubsection">
+            <h4 class="subsubsection-title">1.1.1. Visão Geral do Dashboard</h4>
+            <p>O Dashboard de Atividades é composto pelos seguintes elementos:</p>
+            <ul>
+              <li>Painel de filtros de consulta;</li>
+              <li>Indicadores resumidos de status das atividades;</li>
+              <li>Lista detalhada dos chamados cadastrados;</li>
+              <li>Botões de ação rápida.</li>
+            </ul>
+          </section>
+
+          <section id="filtros-consulta" class="subsubsection">
+            <h4 class="subsubsection-title">1.1.2. Filtros de Consulta</h4>
+            <p>Os filtros permitem refinar a pesquisa dos chamados de acordo com critérios operacionais, contratuais e temporais.</p>
+            
+            <div class="field-block">
+              <h5 class="field-name">ID</h5>
+              <p><strong>Tipo:</strong> Campo digitável</p>
+              <p><strong>Função:</strong> Utilizado para informar o número interno EQS do chamado (não corresponde ao ID do cliente).</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Situação</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Opções:</strong></p>
+              <ul>
+                <li>Aguardando confirmação</li>
+                <li>Aberto</li>
+                <li>Em andamento</li>
+                <li>Fechado</li>
+                <li>Fechado com pendência</li>
+                <li>Cancelado</li>
+              </ul>
+              <p class="observation"><strong>Observação:</strong> Por padrão, o sistema mantém quatro situações previamente selecionadas.</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Contrato</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Opção padrão:</strong> TJSP</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Tipo</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Opções:</strong></p>
+              <ul>
+                <li>Abastecimento</li>
+                <li>Acompanhamento</li>
+                <li>Adequação</li>
+                <li>Comunicado</li>
+                <li>Contratação</li>
+                <li>Corretiva</li>
+                <li>Corretiva programada</li>
+                <li>Desinstalação</li>
+                <li>GMG</li>
+                <li>Implantação</li>
+                <li>Inspeção</li>
+                <li>Instalação</li>
+                <li>Preditiva</li>
+                <li>Preventiva</li>
+                <li>Preventiva de Elétrica</li>
+                <li>Preventiva de Hidráulica</li>
+                <li>Preventiva Predial</li>
+                <li>Registro</li>
+                <li>Retirada de pendência</li>
+                <li>Teste</li>
+                <li>Vistoria</li>
+              </ul>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Atividade</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Opções:</strong></p>
+              <ul>
+                <li>Alvenaria</li>
+                <li>Caça Vazamento</li>
+                <li>Diário</li>
+                <li>Elétrica</li>
+                <li>Hidráulica</li>
+                <li>Pintura</li>
+                <li>Poda</li>
+                <li>Reparo/Instalação Geral</li>
+                <li>Telhado</li>
+                <li>Entre outros</li>
+              </ul>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Estado</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Função:</strong> Utilizada para filtro por estado</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Macroárea</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Função:</strong> Região macro (não aplicável)</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Local</h5>
+              <p><strong>Tipo:</strong> Campo com autocompletar</p>
+              <p><strong>Função:</strong> Permite selecionar polos e prédios cadastrados</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Ativo do Local</h5>
+              <p><strong>Tipo:</strong> Campo com autocompletar</p>
+              <p><strong>Função:</strong> Sem função operacional no momento</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">LPU</h5>
+              <p><strong>Tipo:</strong> Lista suspensa</p>
+              <p><strong>Opções:</strong></p>
+              <ul>
+                <li>Todos</li>
+                <li>Com LPU</li>
+                <li>Sem LPU (padrão)</li>
+              </ul>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Responsável</h5>
+              <p><strong>Tipo:</strong> Campo com autocompletar</p>
+              <p><strong>Função:</strong> Permite selecionar colaboradores EQS</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Ocorrência</h5>
+              <p><strong>Tipo:</strong> Período (intervalo de datas)</p>
+              <p><strong>Função:</strong> Refere-se à data de abertura do chamado pelo cliente</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Prazo</h5>
+              <p><strong>Tipo:</strong> Período (intervalo de datas)</p>
+              <p><strong>Função:</strong> Refere-se à data de agendamento para execução da atividade</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Fechamento</h5>
+              <p><strong>Tipo:</strong> Período (intervalo de datas)</p>
+              <p><strong>Função:</strong> Refere-se à data de conclusão da atividade</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Vencimento</h5>
+              <p><strong>Tipo:</strong> Lista suspensa</p>
+              <p><strong>Opções:</strong></p>
+              <ul>
+                <li>Todos</li>
+                <li>Vencido</li>
+                <li>Em 5 dias</li>
+                <li>Em 15 dias</li>
+              </ul>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Cód. Cliente</h5>
+              <p><strong>Tipo:</strong> Campo digitável</p>
+              <p><strong>Função:</strong> Aceita exclusivamente o ID completo do chamado aberto pelo cliente</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Prioridade</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Função:</strong> Utilizada para classificação do nível de prioridade</p>
+            </div>
+
+            <div class="field-block">
+              <h5 class="field-name">Avaliação</h5>
+              <p><strong>Tipo:</strong> Lista suspensa (múltipla escolha)</p>
+              <p><strong>Função:</strong> Utilizada para classificação da avaliação do atendimento</p>
+            </div>
+
+            <section id="regras-restricoes" class="subsubsubsection">
+              <h5 class="subsubsubsection-title">1.1.2.1. Regras e Restrições de Consulta</h5>
+              <p>Para consultas com períodos extensos, aplicam-se as seguintes regras:</p>
+              <ul>
+                <li>É obrigatório informar Contrato ou Responsável;</li>
+                <li>Caso contrário, o período máximo permitido para consulta é de 6 meses;</li>
+                <li>O descumprimento das regras gera alerta automático em tela.</li>
+              </ul>
+            </section>
+          </section>
+
+          <section id="botoes-acao-tela" class="subsubsection">
+            <h4 class="subsubsection-title">1.1.3. Botões de Ação (Tela)</h4>
+            <p>Localizados na parte inferior do painel de filtros:</p>
+            <ul>
+              <li><strong>Consultar:</strong> executa a pesquisa conforme os filtros aplicados;</li>
+              <li><strong>Limpar:</strong> restaurar os filtros padrão do sistema;</li>
+              <li><strong>Exportar Excel:</strong> exporta a lista de atividades conforme os filtros utilizados;</li>
+              <li><strong>Favoritos:</strong> permite gerenciar pesquisas salvas, colunas exibidas e indicadores. Ao clicar na seta, é possível editar o dashboard.</li>
+            </ul>
+          </section>
+
+          <section id="indicadores" class="subsubsection">
+            <h4 class="subsubsection-title">1.1.4. Indicadores de Atividades</h4>
+            <p>Os indicadores funcionam como filtros rápidos.</p>
+            
+            <h5>Funcionamento:</h5>
+            <p>Ao selecionar um indicador, o sistema aplica automaticamente o filtro correspondente e atualiza a lista de atividades. Esses indicadores podem ser personalizados por meio da função Favoritos.</p>
+            
+            <h5>Indicadores disponíveis:</h5>
+            <ul>
+              <li>Crítico</li>
+              <li>Vencido</li>
+              <li>Aguardando</li>
+              <li>Abertos</li>
+              <li>Andamento</li>
+              <li>Pendentes</li>
+              <li>Fechado</li>
+            </ul>
+          </section>
+
+          <section id="lista-atividades" class="subsubsection">
+            <h4 class="subsubsection-title">1.1.5. Lista de Atividades</h4>
+            <p>Exibe os chamados conforme os filtros aplicados, com colunas como ID, Tipo, Local, Responsável, Situação, entre outras. As colunas exibidas podem ser personalizadas nos favoritos.</p>
+
+            <section id="botoes-acao-linha" class="subsubsubsection">
+              <h5 class="subsubsubsection-title">1.1.5.1. Botões de Ação por Linha</h5>
+              <p>Disponíveis na coluna Ação de cada registro:</p>
+              <ul>
+                <li><strong>Editar:</strong> permite alterar dados do chamado;</li>
+                <li><strong>Gerar PDF de Evidências:</strong> gera relatório com fotos e anexos;</li>
+                <li><strong>Excluir/Cancelar:</strong> cancela ou remove o chamado, conforme as permissões do usuário.</li>
+              </ul>
+            </section>
+          </section>
+
+          <section id="botao-novo" class="subsubsection">
+            <h4 class="subsubsection-title">1.1.6. Botão Novo</h4>
+            <p>O botão Novo, localizado no topo do dashboard em <strong>Atividades > Atividade</strong>, permite registrar um novo chamado e redireciona o usuário para a página de Nova Atividade.</p>
+
+            <section id="nova-atividade" class="subsubsubsection">
+              <h5 class="subsubsubsection-title">1.1.6.1. Nova Atividade</h5>
+              <p>O formulário de Nova Atividade é utilizado para o registro inicial do chamado.</p>
+              
+              <div class="field-block">
+                <h6 class="field-name">Local de Atendimento*</h6>
+                <p><strong>Obrigatório:</strong> Sim</p>
+                <p><strong>Como preencher:</strong></p>
+                <ul>
+                  <li>Digite parte do nome do local, contrato ou endereço;</li>
+                  <li>Selecione a opção correta na lista apresentada.</li>
+                </ul>
+                <p class="observation"><strong>Observação:</strong> Somente após a seleção do Local de Atendimento os demais campos do formulário serão habilitados. Caso o local não exista, utilize o link para cadastro de novo local.</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Atividade*</h6>
+                <p><strong>Tipo:</strong> Lista suspensa obrigatória</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Data Ocorrência*</h6>
+                <p><strong>Função:</strong> Data de abertura do chamado pelo cliente. Após o preenchimento, o campo Prazo é habilitado.</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Prazo*</h6>
+                <p><strong>Função:</strong> Data de agendamento para execução da atividade</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Previsão de Chegada ao Local de Atendimento</h6>
+                <p><strong>Tipo:</strong> Campo opcional de data e hora</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Previsão de Retorno de Energia</h6>
+                <p><strong>Tipo:</strong> Campo opcional, aplicável apenas a ocorrências elétricas</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Atendimento Crítico</h6>
+                <p><strong>Tipo:</strong> Checkbox opcional, com padrão "Não"</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Foto Ocorrência</h6>
+                <p><strong>Tipo:</strong> Upload opcional de imagens relacionadas à ocorrência</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Responsável*</h6>
+                <p><strong>Função:</strong> Colaborador responsável pela supervisão da atividade</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Observação p/ Responsável</h6>
+                <p><strong>Função:</strong> Campo destinado à descrição dos chamados repassados pelo cliente</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Cód. Interno do Cliente</h6>
+                <p><strong>Tipo:</strong> Campo  para o ID do chamado do cliente</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Observação Cliente</h6>
+                <p><strong>Função:</strong> Campo opcional para orientações internas. Não é possível alterar após o salvamento.</p>
+              </div>
+
+              <h3>Fluxo resumido de cadastro:</h3>
+              <ol>
+                <li>Selecionar o Local de Atendimento;</li>
+                <li>Preencher a Data de Ocorrência;</li>
+                <li>Selecionar a Atividade e o Responsável;</li>
+                <li>Preencher os campos opcionais, se necessário;</li>
+                <li>Clicar em Salvar.</li>
+              </ol>
+              <p class="observation"><strong>Observação:</strong> Após o salvamento, a atividade é registrada com a situação Aberto e o sistema redireciona para a tela de Cadastro de Atividade.</p>
+            </section>
+
+            <section id="cadastro-nova" class="subsubsubsection">
+              <h5 class="subsubsubsection-title">1.1.6.2. Cadastro de Atividade (Nova Atividade)</h5>
+              
+              <h4>Botões do topo:</h4>
+              <ul>
+                <li><strong>Abrir Orçamento:</strong> abre nova guia para inclusão de orçamento;</li>
+                <li><strong>Exportar PDF:</strong> gera relatório com fotos e anexos;</li>
+                <li><strong>Bloquear:</strong> bloqueia o acesso do cliente ao relatório.</li>
+              </ul>
+
+              <h4>Abas disponíveis:</h4>
+              
+              <div class="field-block">
+                <h6 class="field-name">Atividade</h6>
+                <p>Permite alterar informações como:</p>
+                <ul>
+                  <li>Situação</li>
+                  <li>Data de Ocorrência</li>
+                  <li>Prazo</li>
+                  <li>Previsão de Chegada</li>
+                  <li>Previsão de Retorno de Energia</li>
+                  <li>Atendimento Crítico</li>
+                  <li>Responsável</li>
+                  <li>Observação p/ Responsável</li>
+                  <li>Cód. Interno do Cliente</li>
+                  <li>Foto da Ocorrência</li>
+                </ul>
+                <p>Inclui também o link <strong>Atividade no Local</strong>, que lista os serviços executados naquele local.</p>
+                <p>O <strong>histórico</strong>  apresenta todas as interações realizadas na atividade, enquanto os <strong>comentários</strong> são utilizados para mensagens internas de controle.</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Relatório</h6>
+                <p>Contém as informações detalhadas do chamado:</p>
+                <ul>
+                  <li>Descrição do Chamado</li>
+                  <li>Condição Antes</li>
+                  <li>Condição Durante</li>
+                  <li>Condição Depois</li>
+                  <li>Conclusão do Chamado</li>
+                </ul>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Cadastro de Interações</h6>
+                <p>Utilizado para inserir:</p>
+                <ul>
+                  <li>Descrição do chamado do cliente</li>
+                  <li>Fotos do antes, durante e depois</li>
+                  <li>Conclusão detalhada do serviço executado</li>
+                </ul>
+                <p class="observation"><strong>Observação:</strong> Para carregar imagens, selecione a foto e clique em enviar após o carregamento.</p>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">LPU</h6>
+                <p><strong>Status:</strong> As funções desta aba não são utilizadas neste momento.</p>
+              </div>
+            </section>
+
+            <section id="cadastro-edicao" class="subsubsubsection">
+              <h5 class="subsubsubsection-title">1.1.6.3. Cadastro de Atividade (Edição de Atividade em Aberto)</h5>
+              <p>Durante a edição da atividade, é possível alterar:</p>
+              
+              <div class="field-block">
+                <h6 class="field-name">Na aba Atividade:</h6>
+                <ul>
+                  <li>Data de Ocorrência</li>
+                  <li>Prazo</li>
+                  <li>Previsão de Chegada ao Local de Atendimento</li>
+                  <li>Previsão de Retorno de Energia</li>
+                  <li>Atendimento Crítico</li>
+                  <li>Responsável</li>
+                  <li>Observação p/ Responsável</li>
+                  <li>Cód. Interno do Cliente</li>
+                </ul>
+              </div>
+
+              <div class="field-block">
+                <h6 class="field-name">Na aba Cadastro de Interações:</h6>
+                <ul>
+                  <li>Descrição do Chamado</li>
+                  <li>Condição Antes</li>
+                  <li>Condição Durante</li>
+                  <li>Condição Depois</li>
+                  <li>Conclusão do Chamado</li>
+                </ul>
+              </div>
+
+              <p class="observation"><strong>Observação importante:</strong> Ao salvar a atividade com a situação fechado, não será possível realizar alterações, exceto em situações específicas.</p>
+            </section>
+
+            <section id="cadastro-fechada" class="subsubsubsection">
+              <h5 class="subsubsubsection-title">1.1.6.4. Cadastro de Atividade (Edição de Atividade Fechada)</h5>
+              
+              <p>Ao abrir a edição de uma atividade fechada, são disponibilizados os seguintes botões:</p>
+              <ul>
+                <li><strong>Enviar p/ aprovação do cliente:</strong> envia e-mail com o PDF do relatório (funções Aprovar/Reprovar não funcionais no momento);</li>
+                <li><strong>Fechar com pendência:</strong> utilizado quando há necessidade de aguardar compra ou chegada de material;</li>
+                <li><strong>Nova atividade relacionada:</strong> cria um novo chamado vinculado à atividade atual.</li>
+              </ul>
+
+              <h6>Edições possíveis:</h6>
+              <ul>
+                <li>Alterar a situação de Fechado para Fechado com pendência, liberando a edição;</li>
+                <li>Alterar o Cód. Interno do Cliente (ID do chamado do cliente).</li>
+              </ul>
+            </section>
+          </section>
+        </section>
+
+        <section id="dispositivo-movel" class="subsection">
+          <h3 class="subsection-title">1.2. Dispositivo Móvel</h3>
+          <div class="development">(Manual em desenvolvimento)</div>
+        </section>
+
+        <section id="orcamento" class="subsection">
+          <h3 class="subsection-title">1.3. Orçamento de Atividades</h3>
+          <div class="development">(Manual em desenvolvimento)</div>
+        </section>
+
+        <section id="rastreamento" class="subsection">
+          <h3 class="subsection-title">1.4. Rastreamento</h3>
+          <div class="development">(Manual em desenvolvimento)</div>
+        </section>
+
+        <section id="agendamentos" class="subsection">
+          <h3 class="subsection-title">1.5. Agendamentos</h3>
+          <div class="development">(Manual em desenvolvimento)</div>
+        </section>
+
+        <section id="cadastros" class="subsection">
+          <h3 class="subsection-title">1.6. Cadastros (CH4)</h3>
+          <div class="development">(Manual em desenvolvimento)</div>
+        </section>
+
+        <section id="relatorios" class="subsection">
+          <h3 class="subsection-title">1.7. Relatórios (CHM)</h3>
+          <div class="development">(Manual em desenvolvimento)</div>
+        </section>
+      </section>
+
+      <section id="rh" class="section">
+        <h2 class="section-title">2. RH</h2>
+        <div class="development">(Manual em desenvolvimento)</div>
+      </section>
+
+      <section id="treinamento" class="section">
+        <h2 class="section-title">3. Treinamento</h2>
+        <div class="development">(Manual em desenvolvimento)</div>
+      </section>
+    </main>
+  </div>
+
+  <button id="backToTop" aria-label="Voltar ao topo">↑</button>
+
+  <script src="manual-script.js"></script>
 </body>
 </html>

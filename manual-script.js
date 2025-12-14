@@ -1,104 +1,86 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggles = document.querySelectorAll('.menu-toggle');
-    const menuLinks = document.querySelectorAll('.menu-link');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.menu-toggle');
+    const links = document.querySelectorAll('.menu-link');
+    const backToTop = document.getElementById('backToTop');
+    const headerHeight = document.querySelector('.header').offsetHeight;
 
-    menuToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
+    /* ===============================
+       MENU EXPANDIR / RETRAIR
+    =============================== */
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', e => {
             e.preventDefault();
             e.stopPropagation();
 
-            const menuItem = this.parentElement;
-            const submenu = menuItem.querySelector(':scope > .submenu');
+            const item = toggle.closest('.menu-item');
+            const submenu = item.querySelector(':scope > .submenu');
 
-            if (submenu) {
-                submenu.classList.toggle('expanded');
-                this.classList.toggle('expanded');
+            if (!submenu) return;
+
+            submenu.classList.toggle('expanded');
+            toggle.classList.toggle('expanded');
+        });
+    });
+
+    /* ===============================
+       SCROLL SUAVE + ATIVO
+    =============================== */
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            const id = link.getAttribute('href');
+            if (!id.startsWith('#')) return;
+
+            e.preventDefault();
+            const target = document.querySelector(id);
+            if (!target) return;
+
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+
+            window.scrollTo({
+                top: target.offsetTop - headerHeight - 20,
+                behavior: 'smooth'
+            });
+
+            let parent = link.parentElement;
+            while (parent) {
+                if (parent.classList.contains('submenu')) {
+                    parent.classList.add('expanded');
+                    const t = parent.previousElementSibling;
+                    if (t?.classList.contains('menu-toggle')) {
+                        t.classList.add('expanded');
+                    }
+                }
+                parent = parent.parentElement;
             }
         });
     });
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
+    /* ===============================
+       HIGHLIGHT AUTOMÁTICO
+    =============================== */
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const pos = window.scrollY + headerHeight + 120;
 
-            if (href && href.startsWith('#')) {
-                e.preventDefault();
-
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    menuLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
-
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-
-                    let parent = this.parentElement;
-                    while (parent) {
-                        if (parent.classList.contains('submenu')) {
-                            parent.classList.add('expanded');
-                            const toggle = parent.previousElementSibling;
-                            if (toggle && toggle.classList.contains('menu-toggle')) {
-                                toggle.classList.add('expanded');
-                            }
-                        }
-                        parent = parent.parentElement;
-                    }
+        sections.forEach(sec => {
+            if (pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight) {
+                const link = document.querySelector(`.menu-link[href="#${sec.id}"]`);
+                if (link) {
+                    links.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
                 }
             }
         });
+
+        /* Botão topo */
+        backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
     });
 
-    function highlightActiveSection() {
-        const sections = document.querySelectorAll('section[id]');
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        const scrollPosition = window.scrollY + headerHeight + 100;
-
-        let currentSection = null;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                currentSection = section;
-            }
-        });
-
-        if (currentSection) {
-            const currentId = currentSection.getAttribute('id');
-            const correspondingLink = document.querySelector(`.menu-link[href="#${currentId}"]`);
-
-            if (correspondingLink) {
-                menuLinks.forEach(link => link.classList.remove('active'));
-                correspondingLink.classList.add('active');
-            }
-        }
-    }
-
-    let scrollTimeout;
-    window.addEventListener('scroll', function() {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(highlightActiveSection, 100);
+    /* ===============================
+       BOTÃO TOPO
+    =============================== */
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    const firstLevelItems = document.querySelectorAll('.menu > .menu-list > .menu-item');
-    firstLevelItems.forEach(item => {
-        const submenu = item.querySelector(':scope > .submenu');
-        if (submenu) {
-            submenu.classList.add('expanded');
-            const toggle = item.querySelector(':scope > .menu-toggle');
-            if (toggle) {
-                toggle.classList.add('expanded');
-            }
-        }
-    });
-
-    highlightActiveSection();
 });

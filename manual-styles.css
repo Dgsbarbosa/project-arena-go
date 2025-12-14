@@ -172,7 +172,7 @@ body {
 }
 
 .menu-toggle::before {
-    content: '�';
+    content: '�';
     font-size: 0.7rem;
 }
 
@@ -367,4 +367,41 @@ strong {
         width: 100%;
         justify-content: space-between;
     }
+}
+/* ===============================
+   ÍCONE MENU
+=============================== */
+.menu-toggle::before {
+    content: '▸';
+    font-size: 0.9rem;
+}
+
+.menu-toggle.expanded::before {
+    content: '▾';
+}
+
+/* ===============================
+   BOTÃO VOLTAR AO TOPO
+=============================== */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-red);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 999;
+}
+
+#backToTop:hover {
+    opacity: 0.9;
 }
